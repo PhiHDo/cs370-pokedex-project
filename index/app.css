@@ -52,7 +52,6 @@ h1 {
     height: 180px;
 }
 
-/*animation when you hover over a pokemon*/
 @keyframes bounce {
     20% {
         transform: translateY(-6px);
@@ -90,8 +89,6 @@ h1 {
     right: 15px;
 }
 
-/*pop up window*/
-/*click on pokemon icon and it will load its own page for it */
 .popup {
     position: fixed;
     top: 0;
@@ -105,7 +102,6 @@ h1 {
     align-items: center;
 }
 
-/*close button for the pop up window*/
 #closeButton {
     position: absolute;
     top: 20px;
