@@ -21,7 +21,7 @@ searchBar.addEventListener('keyup', (e) => {
 //fetches data on pokemon from the pokemon api
 const loadPokemon = async () => {
     try {
-        const res = await fetch('https://pokeapi.co/api/v2/pokemon/?limit=550');
+        const res = await fetch('https://pokeapi.co/api/v2/pokemon/?limit=898');
         data = await res.json();
         pokemon = data.results.map( (results , index)  => ({
            name: results.name,
