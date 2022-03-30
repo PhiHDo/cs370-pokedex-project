@@ -1,34 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Pokedex</title>
-        <link rel="stylesheet" href="app.css" />
-        <link
-            href="https://fonts.googleapis.com/css?family=Rubik&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <div class="container">
-            <h1>Team Brogrammer's Pokedex</h1>
 
-            <!--START OF HTML search bar elements-->
-            <div id="searchWrapper">
-                <input
-                    type="text"
-                    name="searchBar"
-                    id="searchBar"
-                    placeholder="Search for a Pokemon"
-                />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="app.css" />
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--Sidebar-->
+        <div class="sidebar">
+            <div class="item">
+                <!-- 1 Sort Result -->
+                <button class="item-btn"><i class="sortSidebar"></i>Sort Result By <i
+                        class="fas fa-angle-right dropdown"></i></button>
+                <div class="submenu">
+                    <label class="subitem">
+                        <input type="radio" id="hnumber" name="sortsub" value="hnumber">
+                        Highest Number 
+                    </label>
+                    <label class="subitem">
+                        <input type="radio" id="lnumber" name="sortsub" value="lnumber" checked>
+                        Lowest Number
+                    </label>
+                    <label class="subitem">
+                        <input type="radio" id="atoz" name="sortsub" value="atoz">
+                        A to Z
+                    </label>
+                    <label class="subitem">
+                        <input type="radio" id="ztoa" name="sortsub" value="ztoa">
+                        Z to A
+                    </label>
+                </div>
+
+                <!-- 2 Sort by generations -->
+                <button class="item-btn"><i class="sortSidebar"></i>Generations <i
+                        class="fas fa-angle-right dropdown"></i></button>
+                <div class="submenu">
+                    <label class="subitem">
+                        <input type="radio" id="g9" name="sortgeneration" value="g9" checked>
+                        All Generations
+                    </label>
+                    <label class="subitem">
+                        <input type="radio" id="g1" name="sortgeneration" value="f1">
+                        Generation 1
+                    </label>
+                    <label class="subitem">
+                        <input type="radio" id="g2" name="sortgeneration" value="g2">
+                        Generation 2
+                    </label>
+                    <label class="subitem">
+                        <input type="radio" id="g3" name="sortgeneration" value="g3">
+                        Generation 3
+                    </label>
+                    <label class="subitem">
+                        <input type="radio" id="g4" name="sortgeneration" value="g4">
+                        Generation 4
+                    </label>
+                    <label class="subitem">
+                        <input type="radio" id="g5" name="sortgeneration" value="g5">
+                        Generation 5
+                    </label>
+                    <label class="subitem">
+                        <input type="radio" id="g6" name="sortgeneration" value="g6">
+                        Generation 6
+                    </label>
+                    <label class="subitem">
+                        <input type="radio" id="g7" name="sortgeneration" value="g7">
+                        Generation 7
+                    </label>
+                    <label class="subitem">
+                        <input type="radio" id="g8" name="sortgeneration" value="g8">
+                        Generation 8
+                    </label>
+                </div>
+
+                <!-- 3 Sort by Type -->
+                <button class="item-btn"><i class="sortSidebar"></i>Pokemon Type <i
+                        class="fas fa-angle-right dropdown"></i></button>
+                <div class="submenu">
+                    <label class="subitem">
+                        <input type="checkbox" id="normal" name="sortType" value="Normal" >
+                        Normal
+                    </label>
+                    <label class="subitem">
+                        <input type="checkbox" id="fire" name="sortType" value="Fire" >
+                        Fire
+                    </label>
+                    <label class="subitem">
+                        <input type="checkbox" id="water" name="sortType" value="Water" >
+                        Water
+                    </label>
+                    <label class="subitem">
+                        <input type="checkbox" id="grass" name="sortType" value="Grass" >
+                        Grass
+                    </label>
+                    <label class="subitem">
+                        <input type="checkbox" id="electric" name="sortType" value="Electric" >
+                        Electric
+                    </label>
+                    <label class="subitem">
+                        <input type="checkbox" id="ice" name="sortType" value="Ice" >
+                        Ice
+                    </label>
+                    <label class="subitem">
+                        <input type="checkbox" id="fifghting" name="sortType" value="Fifghting" >
+                        Fifghting
+                    </label>
+                    <label class="subitem">
+                        <input type="checkbox" id="posion" name="sortType" value="Posion" >
+                        Posion
+                    </label>
+                    <label class="subitem">
+                        <input type="checkbox" id="ground" name="sortType" value="Ground" >
+                        Ground
+                    </label>
+                    <label class="subitem">
+                        <input type="checkbox" id="flying" name="sortType" value="Flying" >
+                        Flying
+                    </label>
+                    <label class="subitem">
+                        <input type="checkbox" id="psychic" name="sortType" value="Psychic" >
+                        Psychic
+                    </label>
+                    <label class="subitem">
+                        <input type="checkbox" id="rock" name="sortType" value="Rock" >
+                        Rock
+                    </label>
+                    <label class="subitem">
+                        <input type="checkbox" id="ghost" name="sortType" value="Ghost" >
+                        Ghost
+                    </label>
+                    <label class="subitem">
+                        <input type="checkbox" id="dark" name="sortType" value="Dark" >
+                        Dark
+                    </label>
+                    <label class="subitem">
+                        <input type="checkbox" id="dragon" name="sortType" value="Dragon" >
+                        Dragon
+                    </label>
+                    <label class="subitem">
+                        <input type="checkbox" id="steel" name="sortType" value="Steel" >
+                        Steel
+                    </label>
+                    <label class="subitem">
+                        <input type="checkbox" id="fairy" name="sortType" value="Fairy" >
+                        Fairy
+                    </label>
+                </div>
             </div>
+        </div>
+        <!--body-->
+        <div class="content">
+            <h1>Team Brogrammer's Pokedex</h1>
+            <!--START OF HTML search bar elements-->
+            <a id="searchWrapper">
+                <input type="text" name="searchBar" id="searchBar" placeholder="Search for a Pokemon" />
+            </a>
             <!--END OF HTML search bar elements-->
 
             <ul id="pokedex"></ul>
         </div>
+        <div class="sideBar">
 
-        <script src="app.js"></script>
-    </body>
+            <!--Toggle-->
+            <script>
+                console.log("s")
+                var dropdown = document.getElementsByClassName("item-btn");
+                var i;
+
+                console.log(dropdown.length)
+                for (i = 0; i < dropdown.length; i++) {
+                    dropdown[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        var dropdownContent = this.nextElementSibling;
+                        if (dropdownContent.style.display === "block") {
+                            dropdownContent.style.display = "none";
+                        } else {
+                            dropdownContent.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+
+            <script src="app.js"></script>
+</body>
+
 </html>
