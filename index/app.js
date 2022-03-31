@@ -66,7 +66,7 @@ const displayWindow = (pokeman) => {
     const image = pokeman.sprites['front_default'];
     const HTMLstring =`
         <div class = "popup">
-            <button id="closeButton" onclick="closePopup()
+            <button id="closeButton"  onclick="closePopup()
             ">Close</button>
             <div class="card">
                 <img class="card-image" src='${image}'/>
@@ -91,3 +91,7 @@ const closePopup = () => {
 };
 
 loadPokemon();
+
+
+
+
