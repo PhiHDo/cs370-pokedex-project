@@ -155,7 +155,7 @@ button:hover {
 .taskBar{
     background:  whitesmoke;
     position: fixed;
-    Width: 100%;
+    Width: 80%;
     top: 0;
     display: flex;
     flex-direction: row;
