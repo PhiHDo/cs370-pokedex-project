@@ -4,12 +4,8 @@ Product Ower: Jeremy Pearson,
 Scrum Master: Phi Do :3
 Developers: Aaron Serrano and Daniel Galarza.
 
-Features added as of 3/22/2022:
--Displays all 898 Pokemon, their names and images
+Features:
+-Displays all 898 current Pokemon, their names, types, moves, stats
 -Search bar (not case sensitive)
--Bounce animation when hoving over pokemon
 -homepage
-
-Things in progress:
--pop up page (displays each pokemon's attributes)
--finalize home menu design
+-Page to compare the stats of 2 Pokemon
