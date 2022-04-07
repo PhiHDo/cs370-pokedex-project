@@ -2,7 +2,7 @@ body {
     background-color: lightsteelblue; 
     color: white;
     margin: 0;
-    font-family: rubik;
+    font-family: Rubik;
 }
 
 *{
@@ -167,7 +167,7 @@ button:hover {
 }
 
 #mainPage{
-    border: solid 3px lightsteelblue;
+    border: solid 3px black;
     flex-grow: 1;
 }
 
@@ -183,7 +183,7 @@ button:hover {
 }
 
 #News{
-    border: solid 3px lightsteelblue;
+    border: solid 3px black;
     flex-grow: 2;
 }
 
@@ -194,7 +194,7 @@ button:hover {
 }
 
 #comparePokemon{
-    border: solid 3px lightsteelblue;
+    border: solid 3px black;
     flex-grow: 2;
 }
 
@@ -205,7 +205,7 @@ button:hover {
 }
 
 #gameMechanics{
-    border: solid 3px lightsteelblue;
+    border: solid 3px black;
     flex-grow: 2;
 }
 
@@ -216,7 +216,7 @@ button:hover {
 }
 
 #aboutUs{
-    border: solid 3px lightsteelblue;
+    border: solid 3px black;
     flex-grow: 2;
 }
 

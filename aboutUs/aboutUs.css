@@ -1,0 +1,108 @@
+body{
+    background-color: lightsteelblue;
+    color: white;
+    margin: 0;
+    font-family: Rubik;
+}
+.taskBar{
+    background:  whitesmoke;
+    position: fixed;
+    Width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: black;
+    font-family: Rubik;
+    text-align: center;
+}
+
+#mainPage{
+    border: solid 3px black;
+    flex-grow: 1;
+}
+
+#mainPage:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0px 1px 2px lightgray;
+}
+
+#mainPage img{
+    height: 64px;
+    width: 64px;
+}
+
+#News{
+    border: solid 3px black;
+    flex-grow: 2;
+}
+
+#News:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0px 1px 2px lightgray;
+}
+
+#comparePokemon{
+    border: solid 3px black;
+    flex-grow: 2;
+}
+
+#comparePokemon:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0px 1px 2px lightgray;
+}
+
+#gameMechanics{
+    border: solid 3px black;
+    flex-grow: 2;
+}
+
+#gameMechanics:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0px 1px 2px lightgray;
+}
+
+#aboutUs{
+    border: solid 3px black;
+    flex-grow: 2;
+}
+
+#aboutUs:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0px 1px 2px lightgray;
+}
+
+#mainContent{
+    background: white;
+    color: black;
+    width: 900px;
+    height: 700px;
+    position:relative;
+    top: 100px;
+    margin: auto;
+    border: 3px black solid;
+    padding: 15px 50px 15px 50px;
+}
+#mainContent h1{
+    text-align: center;
+    font-weight: 800;
+}
+
+#mainContent p{
+    text-indent: 50px;
+    font-size:x-large;
+    line-height: 2.0;
+}
+#mainContent p.alt-text{
+    font-size:medium;
+    color: grey;
+    display: inline;
+}
+#mainContent p.names{
+    display: inline;
+}
