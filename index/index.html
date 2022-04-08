@@ -14,7 +14,7 @@
 <body>
     <div class="taskBar">
         <div id="mainPage">
-            <a href="/home/home.html"><img src="pokeball.png" alt="Pokeball"></a>
+            <a href="../home/home.html"><img src="pokeball.png" alt="Pokeball"></a>
         </div>
 
         <div id="News">
@@ -37,29 +37,7 @@
         <!--Sidebar-->
         <div class="sidebar">
             <div class="item">
-                <!-- 1 Sort Result -->
-                <button class="item-btn"><i class="sortSidebar"></i>Sort Result By <i
-                        class="fas fa-angle-right dropdown"></i></button>
-                <div class="submenu">
-                    <label class="subitem">
-                        <input type="radio" id="hnumber" name="sortsub" value="hnumber">
-                        Highest Number 
-                    </label>
-                    <label class="subitem">
-                        <input type="radio" id="lnumber" name="sortsub" value="lnumber" checked>
-                        Lowest Number
-                    </label>
-                    <label class="subitem">
-                        <input type="radio" id="atoz" name="sortsub" value="atoz">
-                        A to Z
-                    </label>
-                    <label class="subitem">
-                        <input type="radio" id="ztoa" name="sortsub" value="ztoa">
-                        Z to A
-                    </label>
-                </div>
-
-                <!-- 2 Sort by generations -->
+                <!-- 1 Sort by generations -->
                 <button class="item-btn"><i class="sortSidebar"></i>Generations <i
                         class="fas fa-angle-right dropdown"></i></button>
                 <div class="submenu">
@@ -101,79 +79,102 @@
                     </label>
                 </div>
 
-                <!-- 3 Sort by Type -->
+                <!-- 2 Sort by Type -->
                 <button class="item-btn"><i class="sortSidebar"></i>Pokemon Type <i
                         class="fas fa-angle-right dropdown"></i></button>
                 <div class="submenu">
                     <label class="subitem">
-                        <input type="checkbox" id="normal" name="sortType" value="Normal" >
+                        <input type="checkbox" id="normal" name="sortType" value="Normal">
                         Normal
                     </label>
                     <label class="subitem">
-                        <input type="checkbox" id="fire" name="sortType" value="Fire" >
+                        <input type="checkbox" id="fire" name="sortType" value="Fire">
                         Fire
                     </label>
                     <label class="subitem">
-                        <input type="checkbox" id="water" name="sortType" value="Water" >
+                        <input type="checkbox" id="water" name="sortType" value="Water">
                         Water
                     </label>
                     <label class="subitem">
-                        <input type="checkbox" id="grass" name="sortType" value="Grass" >
+                        <input type="checkbox" id="grass" name="sortType" value="Grass">
                         Grass
                     </label>
                     <label class="subitem">
-                        <input type="checkbox" id="electric" name="sortType" value="Electric" >
+                        <input type="checkbox" id="electric" name="sortType" value="Electric">
                         Electric
                     </label>
                     <label class="subitem">
-                        <input type="checkbox" id="ice" name="sortType" value="Ice" >
+                        <input type="checkbox" id="ice" name="sortType" value="Ice">
                         Ice
                     </label>
                     <label class="subitem">
-                        <input type="checkbox" id="fifghting" name="sortType" value="Fifghting" >
+                        <input type="checkbox" id="fifghting" name="sortType" value="Fifghting">
                         Fifghting
                     </label>
                     <label class="subitem">
-                        <input type="checkbox" id="posion" name="sortType" value="Posion" >
+                        <input type="checkbox" id="posion" name="sortType" value="Posion">
                         Posion
                     </label>
                     <label class="subitem">
-                        <input type="checkbox" id="ground" name="sortType" value="Ground" >
+                        <input type="checkbox" id="ground" name="sortType" value="Ground">
                         Ground
                     </label>
                     <label class="subitem">
-                        <input type="checkbox" id="flying" name="sortType" value="Flying" >
+                        <input type="checkbox" id="flying" name="sortType" value="Flying">
                         Flying
                     </label>
                     <label class="subitem">
-                        <input type="checkbox" id="psychic" name="sortType" value="Psychic" >
+                        <input type="checkbox" id="psychic" name="sortType" value="Psychic">
                         Psychic
                     </label>
                     <label class="subitem">
-                        <input type="checkbox" id="rock" name="sortType" value="Rock" >
+                        <input type="checkbox" id="rock" name="sortType" value="Rock">
                         Rock
                     </label>
                     <label class="subitem">
-                        <input type="checkbox" id="ghost" name="sortType" value="Ghost" >
+                        <input type="checkbox" id="ghost" name="sortType" value="Ghost">
                         Ghost
                     </label>
                     <label class="subitem">
-                        <input type="checkbox" id="dark" name="sortType" value="Dark" >
+                        <input type="checkbox" id="dark" name="sortType" value="Dark">
                         Dark
                     </label>
                     <label class="subitem">
-                        <input type="checkbox" id="dragon" name="sortType" value="Dragon" >
+                        <input type="checkbox" id="dragon" name="sortType" value="Dragon">
                         Dragon
                     </label>
                     <label class="subitem">
-                        <input type="checkbox" id="steel" name="sortType" value="Steel" >
+                        <input type="checkbox" id="steel" name="sortType" value="Steel">
                         Steel
                     </label>
                     <label class="subitem">
-                        <input type="checkbox" id="fairy" name="sortType" value="Fairy" >
+                        <input type="checkbox" id="fairy" name="sortType" value="Fairy">
                         Fairy
                     </label>
                 </div>
+
+                <!-- 3 Sort Result -->
+                <button class="item-btn"><i class="sortSidebar"></i>Sort Result By <i
+                        class="fas fa-angle-right dropdown"></i></button>
+                <div class="submenu">
+                    <label class="subitem">
+                        <input type="radio" id="hnumber" name="sortsub" value="hnumber">
+                        Highest Number
+                    </label>
+                    <label class="subitem">
+                        <input type="radio" id="lnumber" name="sortsub" value="lnumber" checked>
+                        Lowest Number
+                    </label>
+                    <label class="subitem">
+                        <input type="radio" id="atoz" name="sortsub" value="atoz">
+                        A to Z
+                    </label>
+                    <label class="subitem">
+                        <input type="radio" id="ztoa" name="sortsub" value="ztoa">
+                        Z to A
+                    </label>
+                </div>
+
             </div>
         </div>
         <!--body-->
