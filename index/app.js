@@ -13,7 +13,26 @@ const g5 = document.getElementById('g5');
 const g6 = document.getElementById('g6');
 const g7 = document.getElementById('g7');
 const g8 = document.getElementById('g8');
+const normal = document.getElementById('normal');
+const fire = document.getElementById('fire');
+const water = document.getElementById('water');
+const grass = document.getElementById('grass');
+const electric = document.getElementById('electric');
+const ice = document.getElementById('ice');
+const fighting = document.getElementById('fighting');
+const posion = document.getElementById('posion');
+const ground = document.getElementById('ground');
+const flying = document.getElementById('flying');
+const psychic = document.getElementById('psychic');
+const rock = document.getElementById('rock');
+const ghost = document.getElementById('ghost');
+const dark = document.getElementById('dark');
+const dragon = document.getElementById('dragon');
+const steel = document.getElementById('steel');
+const fairy = document.getElementById('fairy');
+elements = document.querySelectorAll('input[name="sortType"]');
 //array for each genereation of pokemon.
+let empty = [];
 let gen1 = [];
 let gen2 = [];
 let gen3 = [];
@@ -41,131 +60,100 @@ searchBar.addEventListener('keyup', (e) => {
     displayPokemon(filteredPokemon);
 });
 
+for(var i = 0 ; i < elements.length ; i++){
+    elements[i].addEventListener('click' , sortByType);
+}
+
 hnumber.addEventListener('click' , (e) => {
-        console.log(e);
-            pokemonR = currentPokemon.slice().sort((a , b) => (a.id < b.id) ? 1 : -1);
-            currentPokemon = pokemonR;
-            displayPokemon(pokemonR);     
+        pokemonR = currentPokemon.slice().sort((a , b) => (a.id < b.id) ? 1 : -1);
+        currentPokemon = pokemonR;
+        displayPokemon(pokemonR);     
 })
 
 lnumber.addEventListener('click' , (e) => {
-        console.log(e);
-            pokemonR = currentPokemon.slice().sort((a , b) => (a.id > b.id) ? 1 : -1);
-            currentPokemon = pokemonR;
-            displayPokemon(pokemonR);
+        pokemonR = currentPokemon.slice().sort((a , b) => (a.id > b.id) ? 1 : -1);
+        currentPokemon = pokemonR;
+        displayPokemon(pokemonR);
 })
 
 atoz.addEventListener('click' , (e) => {
-        console.log(e);
-            pokemonR = currentPokemon.slice().sort((a , b) => (a.name > b.name) ? 1 : -1);
-            currentPokemon = pokemonR;
-            displayPokemon(pokemonR);
+        pokemonR = currentPokemon.slice().sort((a , b) => (a.name > b.name) ? 1 : -1);
+        currentPokemon = pokemonR;
+        displayPokemon(pokemonR);
 })
 
 ztoa.addEventListener('click' , (e) => {
-        console.log(e);
-            pokemonR = currentPokemon.slice().sort((a , b) => (a.name < b.name) ? 1 : -1);
-            currentPokemon = pokemonR;
-            displayPokemon(pokemonR);
+        pokemonR = currentPokemon.slice().sort((a , b) => (a.name < b.name) ? 1 : -1);
+        currentPokemon = pokemonR;
+        displayPokemon(pokemonR);
 })
 
 g9.addEventListener('click' , (e) => {
-    currentPokemon = pokemon;
-    lnumber.checked = true;
-    displayPokemon(currentPokemon);
+        currentPokemon = pokemon;
+        lnumber.checked = true;
+        resetTypes();
+        displayPokemon(currentPokemon);
 })
 
 g1.addEventListener('click' , (e) => {
-    gen1 = pokemon.filter((currentPokemon) => {
-        return ( 
-            currentPokemon.id <= 151
-        );
-    });
-    currentPokemon = gen1; 
-    lnumber.checked = true;
-    displayPokemon(gen1)
+        currentPokemon = gen1; 
+        lnumber.checked = true;
+        resetTypes();
+        displayPokemon(gen1)
 })
 
 g2.addEventListener('click' , (e) => {
-    gen2 = pokemon.filter((currentPokemon) => {
-        return ( 
-            currentPokemon.id > 151 && currentPokemon.id <= 251
-        );
-    });
-    currentPokemon = gen2; 
-    lnumber.checked = true;
-    displayPokemon(gen2)
+        currentPokemon = gen2; 
+        lnumber.checked = true;
+        resetTypes();
+        displayPokemon(gen2)
     
 })
 
 g3.addEventListener('click' , (e) => {
-    gen3 = pokemon.filter((currentPokemon) => {
-        return ( 
-            currentPokemon.id > 251 && currentPokemon.id <=386
-        );
-    });
-    currentPokemon = gen3; 
-    lnumber.checked = true;
-    displayPokemon(gen3)
+        currentPokemon = gen3; 
+        lnumber.checked = true;
+        resetTypes();
+        displayPokemon(gen3)
     
 })
 
 g4.addEventListener('click' , (e) => {
-    gen4 = pokemon.filter((currentPokemon) => {
-        return ( 
-            currentPokemon.id > 386 && currentPokemon.id <=494
-        );
-    });
-    currentPokemon = gen4;
-    lnumber.checked = true; 
-    displayPokemon(gen4)
+        currentPokemon = gen4;
+        lnumber.checked = true; 
+        resetTypes();
+        displayPokemon(gen4)
 })
 
 g5.addEventListener('click' , (e) => {
-    gen5 = pokemon.filter((currentPokemon) => {
-        return ( 
-            currentPokemon.id > 494 && currentPokemon.id <=649
-        );
-    });
-    currentPokemon = gen5;
-    lnumber.checked = true; 
-    displayPokemon(gen5)
+        currentPokemon = gen5;
+        lnumber.checked = true; 
+        resetTypes();
+        displayPokemon(gen5)
     
 })
 
 g6.addEventListener('click' , (e) => {
-    gen6 = pokemon.filter((currentPokemon) => {
-        return ( 
-            currentPokemon.id > 649 && currentPokemon.id <=721
-        );
-    });
-    currentPokemon = gen6;
-    lnumber.checked = true;
-    displayPokemon(gen6)
+        currentPokemon = gen6;
+        lnumber.checked = true;
+        resetTypes();
+        displayPokemon(gen6)
     
 })
 
 g7.addEventListener('click' , (e) => {
-    gen7 = pokemon.filter((currentPokemon) => {
-        return ( 
-            currentPokemon.id > 721 && currentPokemon.id <=809
-        );
-    });
-    currentPokemon = gen7;
-    lnumber.checked = true;
-    displayPokemon(gen7)
+        currentPokemon = gen7;
+        lnumber.checked = true;
+        resetTypes();
+        displayPokemon(gen7)
     
 })
 
 g8.addEventListener('click' , (e) => {
-    gen8 = pokemon.filter((currentPokemon) => {
-        return ( 
-            currentPokemon.id > 809 && currentPokemon.id <=898
-        );
-    });
-    currentPokemon = gen8;
-    lnumber.checked = true;
-    displayPokemon(gen8)
+        currentPokemon = gen8;
+        lnumber.checked = true;
+        resetTypes();
+        displayPokemon(gen8)
     
 })
 
@@ -188,6 +176,46 @@ const loadPokemon = () => {
             stats: result.stats.map((stat) => stat.stat.name).join(', '),
             statValue: result.stats.map((stats) => stats.base_stat).join(', ')
         }));
+        gen1 = pokemon.filter((currentPokemon) => {
+            return ( 
+                currentPokemon.id <= 151
+            );
+        });
+        gen2 = pokemon.filter((currentPokemon) => {
+            return ( 
+                currentPokemon.id > 151 && currentPokemon.id <= 251
+            );
+        });
+        gen3 = pokemon.filter((currentPokemon) => {
+            return ( 
+                currentPokemon.id > 251 && currentPokemon.id <=386
+            );
+        });
+        gen4 = pokemon.filter((currentPokemon) => {
+            return ( 
+                currentPokemon.id > 386 && currentPokemon.id <=494
+            );
+        });
+        gen5 = pokemon.filter((currentPokemon) => {
+            return ( 
+                currentPokemon.id > 494 && currentPokemon.id <=649
+            );
+        });
+        gen6 = pokemon.filter((currentPokemon) => {
+            return ( 
+                currentPokemon.id > 649 && currentPokemon.id <=721
+            );
+        });
+        gen7 = pokemon.filter((currentPokemon) => {
+            return ( 
+                currentPokemon.id > 721 && currentPokemon.id <=809
+            );
+        });
+        gen8 = pokemon.filter((currentPokemon) => {
+            return ( 
+                currentPokemon.id > 809 && currentPokemon.id <=898
+            );
+        });
         currentPokemon = pokemon;
         console.log(pokemon);
         displayPokemon(currentPokemon);
@@ -212,18 +240,12 @@ const displayPokemon = (pokemon ) => {
 
 
 const selectPokemon = (id) => {
-    // const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-    // const res = await fetch(url);
     const pokeman = pokemon[id-1];
-    //console.log(pokeman.id);
     displayWindow(pokeman);
 };
 
 //pop up window
 const displayWindow = (pokeman) => {
-    // const type = pokeman.types.map((type) => 
-    // type.type.name).join(', ');
-    // const image = pokeman.sprites['front_default'];
     const HTMLstring =`
         <div class = "popup">
             <button id="closeButton"  onclick="closePopup()
@@ -249,5 +271,98 @@ const closePopup = () => {
     const popup = document.querySelector('.popup');
     popup.parentElement.removeChild(popup);
 };
+
+function checkCurrentGen(){
+    const radioButtons = document.querySelectorAll('input[name="sortgeneration"]');
+    let selectedGen;
+            for (const radioButton of radioButtons) {
+                if (radioButton.checked) {
+                    selectedGen = radioButton.value;
+                    break;
+                }
+            }
+    return selectedGen;
+}
+
+function checkSort(){
+    const radioButtons = document.querySelectorAll('input[name="sortsub"]');
+    let selectedSort;
+            for (const radioButton of radioButtons) {
+                if (radioButton.checked) {
+                    selectedSort = radioButton.value;
+                    break;
+                }
+            }
+    return selectedSort;
+}
+
+function checkType(){
+    const radioButtons = document.querySelectorAll('input[name="sortType"]');
+    let selectedType = [];
+            for (const radioButton of radioButtons) {
+                if (radioButton.checked) {
+                    selectedType.push(radioButton.value);
+                }
+            }
+    return selectedType;
+}
+
+function selectGen(Gen){
+    if(Gen == "g9")
+        return pokemon;
+    else if(Gen =="g1")
+        return gen1;
+    else if(Gen =="g2")
+        return gen2;
+    else if(Gen =="g3")
+        return gen3;
+    else if(Gen =="g4")
+        return gen4;
+    else if(Gen =="g5")
+        return gen5;
+    else if(Gen =="g6")
+        return gen6;
+    else if(Gen =="g7")
+        return gen7;
+    else
+        return gen8;
+}
+
+function resetTypes() {
+    const radioButtons = document.querySelectorAll('input[name="sortType"]');
+    for (const radioButton of radioButtons) {
+        radioButton.checked = false;
+    }
+}
+
+function sortByType(){
+    filteredPokemon = selectGen(checkCurrentGen());
+    selectedTypes = checkType();
+    if(selectedTypes.length == 1){
+        console.log(selectedTypes[0]);
+            filteredPokemon = selectGen(checkCurrentGen()).filter((pokemon) => {
+                return (
+                    pokemon.type.toLowerCase().includes(selectedTypes[0].toLowerCase())
+                );
+            });
+    }
+    else if(selectedTypes.length == 2){
+            filteredPokemon = selectGen(checkCurrentGen()).filter((pokemon) => {
+                return (
+                    pokemon.type.toLowerCase().includes(selectedTypes[0].toLowerCase()) &&
+                    pokemon.type.toLowerCase().includes(selectedTypes[1].toLowerCase())
+                );
+            });
+    }
+    else if(selectedTypes.length > 2){
+        filteredPokemon = empty;
+    }
+    else{
+
+    }
+    currentPokemon = filteredPokemon;
+    displayPokemon(filteredPokemon);
+}
+
 
 loadPokemon();
