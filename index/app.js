@@ -174,7 +174,7 @@ const loadPokemon = () => {
             height: result.height,
             moves: result.moves.map((move) => move.move.name).join(', '),
             stats: result.stats.map((stat) => stat.stat.name).join(', '),
-            statValue: result.stats.map((stats) => stats.base_stat).join(', ')
+            statValue: result.stats.map((stats) => stats.base_stat).join(', '),
         }));
         gen1 = pokemon.filter((currentPokemon) => {
             return ( 
@@ -258,6 +258,13 @@ const displayWindow = (pokeman) => {
                 | <small>Weight: </small>${pokeman.weight}lbs 
                 | <small>Type: </small>${pokeman.type}
                 </p>
+                
+                <h2>Base Stats</h2>
+                <p>${pokeman.stats}</p>
+                <p>${pokeman.statValue}</p>
+
+                <h2>Move Pool</h2>
+                <p>${pokeman.moves}</p>
             </div>
         </div>
         `
