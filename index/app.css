@@ -17,7 +17,6 @@ body {
     height: 100vh;
     display: flex;
     text-align: center;
-
 }
 
 .content{
@@ -25,7 +24,6 @@ body {
     width: 100%;
     padding-top: 100px;
 }
-
 
 h1 {
     text-transform: uppercase;
@@ -67,6 +65,31 @@ h1 {
 }
 
 .card-image {
+    height: 180px;
+}
+
+.card1 {
+    list-style: none;
+    padding: 40px;
+    background-color: #f4f4f4;
+    color: #222;
+    text-align: center; 
+}
+
+.card1-title {
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.card1-subtitle {
+    margin-top: 5px;
+    color: #666;
+    font-weight: lighter;
+}
+
+.card1-image {
     height: 180px;
 }
 
@@ -127,7 +150,7 @@ h1 {
 #closeButton {
     position: absolute;
     top: 20px;
-    left: 20px;
+    right: 20px;
 }
 
 .popup button {
@@ -282,4 +305,3 @@ button:hover {
 /* End Side bar*/
 /*----------------------------------------*/
 /*----------------------------------------*/
-
