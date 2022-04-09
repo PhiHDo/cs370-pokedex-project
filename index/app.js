@@ -184,10 +184,12 @@ const loadPokemon = () => {
             id: result.id,
             weight: result.weight,
             height: result.height,
-            moves: result.moves,
-            stats: result.stats
+            moves: result.moves.map((move) => move.move.name).join(', '),
+            stats: result.stats.map((stat) => stat.stat.name).join(', '),
+            statValue: result.stats.map((stats) => stats.base_stat).join(', ')
         }));
         currentPokemon = pokemon;
+        console.log(pokemon);
         displayPokemon(currentPokemon);
     });
 };
