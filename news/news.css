@@ -6,7 +6,7 @@ body{
 }
 .taskBar{
     background:  whitesmoke;
-    position: fixed;
+    position: absolute;
     Width: 100%;
     top: 0;
     display: flex;
@@ -80,8 +80,8 @@ body{
 #newsContent {
     background: white;
     color: black;
-    width: 900px;
-    height: 700px;
+    width: 1000px;
+    height: 900px;
     position:relative;
     top: 100px;
     margin: auto;
@@ -97,4 +97,10 @@ body{
     text-indent: 50px;
     line-height: 2.0;
     font-size: large;
+}
+#start{
+    position: relative;
+    left:350px;
+    width: 299px;
+    height: 168px;
 }

@@ -6,7 +6,7 @@ body{
 }
 .taskBar{
     background:  whitesmoke;
-    position: fixed;
+    position: absolute;
     Width: 100%;
     top: 0;
     display: flex;
