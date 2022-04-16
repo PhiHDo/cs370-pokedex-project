@@ -189,18 +189,18 @@ button:hover {
     left: 18%;
 }
 
-#mainPage{
+#homePage{
     border: solid 3px black;
     flex-grow: 1;
 }
 
-#mainPage:hover{
+#homePage:hover{
     cursor: pointer;
     transform: translateY(-2px);
     box-shadow: 0px 1px 2px lightgray;
 }
 
-#mainPage img{
+#homePage img{
     height: 64px;
     width: 64px;
 }
@@ -208,6 +208,11 @@ button:hover {
 #News{
     border: solid 3px black;
     flex-grow: 2;
+}
+
+#newsAnchor{
+    text-decoration: inherit;
+    color: inherit;
 }
 
 #News:hover{
@@ -241,6 +246,11 @@ button:hover {
 #aboutUs{
     border: solid 3px black;
     flex-grow: 2;
+}
+
+#aboutUsAnchor{
+    text-decoration: inherit;
+    color: inherit;
 }
 
 #aboutUs:hover{

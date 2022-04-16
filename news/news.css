@@ -36,6 +36,12 @@ body{
 #News{
     border: solid 3px black;
     flex-grow: 2;
+    text-decoration: none;
+}
+
+#newsAnchor{
+    text-decoration: inherit;
+    color: inherit;
 }
 
 #News:hover{
@@ -69,6 +75,11 @@ body{
 #aboutUs{
     border: solid 3px black;
     flex-grow: 2;
+}
+
+#aboutUsAnchor{
+    text-decoration: inherit;
+    color: inherit;
 }
 
 #aboutUs:hover{

@@ -239,10 +239,16 @@ const displayPokemon = (pokemon ) => {
 }
 
 
+
 const selectPokemon = (id) => {
     const pokeman = pokemon[id-1];
     displayWindow(pokeman);
 };
+
+//displaying stats in the overlay
+// const showStats = () => {
+//     for (int i = 0; i <  )
+// };
 
 //pop up window
 const displayWindow = (pokeman) => {
