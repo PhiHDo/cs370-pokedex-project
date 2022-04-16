@@ -242,6 +242,11 @@ button:hover {
     flex-grow: 2;
 }
 
+#gameMechanicsAnchor{
+    text-decoration: inherit;
+    color: inherit;
+}
+
 #gameMechanics:hover{
     cursor: pointer;
     transform: translateY(-2px);
