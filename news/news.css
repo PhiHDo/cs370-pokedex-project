@@ -55,6 +55,11 @@ body{
     flex-grow: 2;
 }
 
+#comparePokemonAnchor{
+    text-decoration: inherit;
+    color: inherit;
+}
+
 #comparePokemon:hover{
     cursor: pointer;
     transform: translateY(-2px);
