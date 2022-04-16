@@ -33,6 +33,22 @@ body{
     width: 64px;
 }
 
+#mainPage{
+    border: solid 3px black;
+    flex-grow: 2;
+}
+
+#mainPageAnchor{
+    text-decoration: inherit;
+    color: inherit;
+}
+
+#mainPage:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0px 1px 2px lightgray;
+}
+
 #News{
     border: solid 3px black;
     flex-grow: 2;
