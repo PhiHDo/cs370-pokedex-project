@@ -118,6 +118,7 @@ h1 {
     border: 1px solid #eaeaea;
     padding: 5px 10px;
     font-size: 12px;
+    margin-bottom: 10px;
 }
 
 #searchWrapper {
@@ -127,8 +128,10 @@ h1 {
 #searchWrapper::after {
     content: '🔍';
     position: absolute;
-    top: 7px;
-    right: 15px;
+    top: 1px;
+    right: 10px;
+    bottom: 1px;
+
 }
 
 /*pop up window*/
