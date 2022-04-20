@@ -118,6 +118,7 @@ h1 {
     border: 1px solid #eaeaea;
     padding: 5px 10px;
     font-size: 12px;
+    margin-bottom: 10px;
 }
 
 #searchWrapper {
@@ -127,8 +128,10 @@ h1 {
 #searchWrapper::after {
     content: '🔍';
     position: absolute;
-    top: 7px;
-    right: 15px;
+    top: 1px;
+    right: 10px;
+    bottom: 1px;
+
 }
 
 /*pop up window*/
@@ -189,9 +192,30 @@ button:hover {
     left: 18%;
 }
 
-#mainPage{
+#homePage{
     border: solid 3px black;
     flex-grow: 1;
+}
+
+#homePage:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0px 1px 2px lightgray;
+}
+
+#homePage img{
+    height: 64px;
+    width: 64px;
+}
+
+#mainPage{
+    border: solid 3px black;
+    flex-grow: 2;
+}
+
+#mainPageAnchor{
+    text-decoration: inherit;
+    color: inherit;
 }
 
 #mainPage:hover{
@@ -200,14 +224,14 @@ button:hover {
     box-shadow: 0px 1px 2px lightgray;
 }
 
-#mainPage img{
-    height: 64px;
-    width: 64px;
-}
-
 #News{
     border: solid 3px black;
     flex-grow: 2;
+}
+
+#newsAnchor{
+    text-decoration: inherit;
+    color: inherit;
 }
 
 #News:hover{
@@ -221,6 +245,11 @@ button:hover {
     flex-grow: 2;
 }
 
+#comparePokemonAnchor{
+    text-decoration: inherit;
+    color: inherit;
+}
+
 #comparePokemon:hover{
     cursor: pointer;
     transform: translateY(-2px);
@@ -232,6 +261,11 @@ button:hover {
     flex-grow: 2;
 }
 
+#gameMechanicsAnchor{
+    text-decoration: inherit;
+    color: inherit;
+}
+
 #gameMechanics:hover{
     cursor: pointer;
     transform: translateY(-2px);
@@ -241,6 +275,11 @@ button:hover {
 #aboutUs{
     border: solid 3px black;
     flex-grow: 2;
+}
+
+#aboutUsAnchor{
+    text-decoration: inherit;
+    color: inherit;
 }
 
 #aboutUs:hover{

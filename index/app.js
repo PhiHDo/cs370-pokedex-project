@@ -229,10 +229,20 @@ const displayPokemon = (pokemon ) => {
     pokedex.innerHTML = pokemonHTMLstring;
 }
 
+//<<<<<<< HEAD
+//=======
+
+
+//>>>>>>> 15dd614899a579dacfb3f4289441c4fd0f27d058
 const selectPokemon = (id) => {
     const pokeman = pokemon[id-1];
     displayWindow(pokeman);
 };
+
+//displaying stats in the overlay
+// const showStats = () => {
+//     for (int i = 0; i <  )
+// };
 
 //pop up window
 const displayWindow = (pokeman) => {
