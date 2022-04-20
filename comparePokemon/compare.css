@@ -198,6 +198,38 @@ body{
 
 }
 
+.movesLevel1, th, td{
+    border: solid black 2px;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+.movesTM1{
+    border: solid black 2px;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr{
+    height:15px;
+}
+
+.movesLevel2, th, td{
+    border: solid black 2px;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.movesTM2{
+    border: solid black 2px;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
 #start{
     position: relative;
     left:350px;
