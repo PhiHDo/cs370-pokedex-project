@@ -135,6 +135,69 @@ body{
     line-height: 2.0;
     font-size: large;
 }
+
+.comparePokemon{
+    background-color: lightsteelblue;
+    position: absolute;
+    Width: 100%;
+    top: 150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: black;
+    font-family: Rubik;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.pokemonCard1 {
+    flex-grow: 3;
+    margin-right: 20px;
+
+}
+
+.pokemonCard2 {
+    flex-grow: 3;
+    margin-left: auto;
+}
+
+/*Search bar*/
+#searchBar {
+    width: 75%;
+    height: 32px;
+    border-radius: 3px;
+    border: 1px solid #eaeaea;
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+#searchWrapper1 {
+    position: relative;
+}
+
+#searchWrapper2 {
+    position: relative;
+}
+
+#searchWrapper1::after {
+    content: '🔍';
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    bottom: 1px;
+
+}
+
+#searchWrapper2::after {
+    content: '🔍';
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    bottom: 1px;
+
+}
+
 #start{
     position: relative;
     left:350px;
