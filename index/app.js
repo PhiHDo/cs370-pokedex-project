@@ -13,23 +13,6 @@ const g5 = document.getElementById('g5');
 const g6 = document.getElementById('g6');
 const g7 = document.getElementById('g7');
 const g8 = document.getElementById('g8');
-const normal = document.getElementById('normal');
-const fire = document.getElementById('fire');
-const water = document.getElementById('water');
-const grass = document.getElementById('grass');
-const electric = document.getElementById('electric');
-const ice = document.getElementById('ice');
-const fighting = document.getElementById('fighting');
-const posion = document.getElementById('posion');
-const ground = document.getElementById('ground');
-const flying = document.getElementById('flying');
-const psychic = document.getElementById('psychic');
-const rock = document.getElementById('rock');
-const ghost = document.getElementById('ghost');
-const dark = document.getElementById('dark');
-const dragon = document.getElementById('dragon');
-const steel = document.getElementById('steel');
-const fairy = document.getElementById('fairy');
 elements = document.querySelectorAll('input[name="sortType"]');
 //array for each genereation of pokemon.
 let empty = [];
@@ -49,9 +32,8 @@ let currentPokemon = []; //array of pokemon that are currently being displayed
 searchBar.addEventListener('keyup', (e) => {
     //search is not case sensitive
     //convert name to lowercase and then compare
-
     const searchString = e.target.value.toLowerCase();
-    const filteredPokemon = pokemon.filter((pokemon) => {
+    const filteredPokemon = currentPokemon.filter((pokemon) => {
         return (
             pokemon.name.toLowerCase().includes(searchString) 
             || pokemon.id <= searchString
@@ -90,6 +72,7 @@ ztoa.addEventListener('click' , (e) => {
 
 g9.addEventListener('click' , (e) => {
         currentPokemon = pokemon;
+        searchBar.value = '';
         lnumber.checked = true;
         resetTypes();
         displayPokemon(currentPokemon);
@@ -97,13 +80,15 @@ g9.addEventListener('click' , (e) => {
 
 g1.addEventListener('click' , (e) => {
         currentPokemon = gen1; 
+        searchBar.value = '';
         lnumber.checked = true;
         resetTypes();
         displayPokemon(gen1)
 })
 
 g2.addEventListener('click' , (e) => {
-        currentPokemon = gen2; 
+        currentPokemon = gen2;
+        searchBar.value = ''; 
         lnumber.checked = true;
         resetTypes();
         displayPokemon(gen2)
@@ -112,6 +97,7 @@ g2.addEventListener('click' , (e) => {
 
 g3.addEventListener('click' , (e) => {
         currentPokemon = gen3; 
+        searchBar.value = '';
         lnumber.checked = true;
         resetTypes();
         displayPokemon(gen3)
@@ -120,6 +106,7 @@ g3.addEventListener('click' , (e) => {
 
 g4.addEventListener('click' , (e) => {
         currentPokemon = gen4;
+        searchBar.value = '';
         lnumber.checked = true; 
         resetTypes();
         displayPokemon(gen4)
@@ -127,6 +114,7 @@ g4.addEventListener('click' , (e) => {
 
 g5.addEventListener('click' , (e) => {
         currentPokemon = gen5;
+        searchBar.value = '';
         lnumber.checked = true; 
         resetTypes();
         displayPokemon(gen5)
@@ -135,6 +123,7 @@ g5.addEventListener('click' , (e) => {
 
 g6.addEventListener('click' , (e) => {
         currentPokemon = gen6;
+        searchBar.value = '';
         lnumber.checked = true;
         resetTypes();
         displayPokemon(gen6)
@@ -143,6 +132,7 @@ g6.addEventListener('click' , (e) => {
 
 g7.addEventListener('click' , (e) => {
         currentPokemon = gen7;
+        searchBar.value = '';
         lnumber.checked = true;
         resetTypes();
         displayPokemon(gen7)
@@ -151,6 +141,7 @@ g7.addEventListener('click' , (e) => {
 
 g8.addEventListener('click' , (e) => {
         currentPokemon = gen8;
+        searchBar.value = '';
         lnumber.checked = true;
         resetTypes();
         displayPokemon(gen8)
@@ -237,7 +228,6 @@ const displayPokemon = (pokemon ) => {
     `).join('');
     pokedex.innerHTML = pokemonHTMLstring;
 }
-
 
 const selectPokemon = (id) => {
     const pokeman = pokemon[id-1];
@@ -374,9 +364,9 @@ function sortByType(){
         filteredPokemon.sort((a , b) => (a.name > b.name) ? 1 : -1);
     else if(currentSort == 'ztoa')
         filteredPokemon.sort((a , b) => (a.name < b.name) ? 1 : -1);
+    searchBar.value = '';
     currentPokemon = filteredPokemon;
     displayPokemon(filteredPokemon);
 }
-
 
 loadPokemon();
