@@ -1,9 +1,9 @@
 var card1 = document.getElementsByClassName('pokemonCard1');
 const fpokemon = document.querySelectorAll('pokedexMoves');
-var tbodyRef = document.getElementById('movesTableL');
-var tbodyRefTM = document.getElementById('movesTML');
-var tbodyRefR = document.getElementById('movesTableR');
-var tbodyRefTMR = document.getElementById('movesTMR');
+var movesTableR = document.getElementById('movesTableL');
+var movesTableRTM = document.getElementById('movesTML');
+var movesTableRR = document.getElementById('movesTableR');
+var movesTableRTMR = document.getElementById('movesTMR');
 const searchBarL = document.getElementById('searchBarL');
 const searchBarR = document.getElementById('searchBarR');
 var listL = document.getElementById('myListL');
@@ -16,6 +16,8 @@ const newListItem = document.createElement("li")
 
 let pokemon = [];
 
+
+//load pokemon into array "pokemon" using count in for loop. Max 898
 const loadComparePokemon = () => {
     const promises = [];
     for (let i = 1; i <= 150; i++) {
@@ -39,6 +41,8 @@ const loadComparePokemon = () => {
 
 loadComparePokemon();
 
+
+//Search Functionality of left search bar
 searchBarL.addEventListener('keyup', (e) => {
     //search is not case sensitive
     //convert name to lowercase and then compare
@@ -48,9 +52,11 @@ searchBarL.addEventListener('keyup', (e) => {
             pokemon.name.toLowerCase().includes(searchString) 
         );
     });
+    //calls second Left display with pokemon array as parameter
     displayDropdownL1(filteredPokemon);
 });
 
+//Search Functionality of right search bar
 searchBarR.addEventListener('keyup', (e) => {
     //search is not case sensitive
     //convert name to lowercase and then compare
@@ -60,28 +66,32 @@ searchBarR.addEventListener('keyup', (e) => {
             pokemon.name.toLowerCase().includes(searchString) 
         );
     });
+    //calls second Right display with pokemon array as parameter
     displayDropdownR1(filteredPokemon);
 });
 
 
+//displays moves of pokemon that is on the left side
 function displayMovesL (pokemon){
-    tbodyRef.innerHTML = `<tr>
+    //starts by resesting current moves for incase pokemon is currently selected
+    movesTableR.innerHTML = `<tr>
                                 <th>LV</th>
                                 <th>Move</th>
                                 <th>Method Learned</th>
                          </tr>` 
 
-    tbodyRefTM.innerHTML = `<tr>
+    movesTableRTM.innerHTML = `<tr>
                          <th>LV</th>
                          <th>Move</th>
                          <th>Method Learned</th>
-                  </tr>` 
+                            </tr>` 
 
     pokemon.moves.forEach(function (value, i) {
 
+        //first display moves learned by level
         if(pokemon.moves[i].version_group_details[pokemon.moves[i].version_group_details.length - 1].move_learn_method.name == "level-up") {
             // Creates a new row
-        var newRow = tbodyRef.insertRow(-1);
+        var newRow = movesTableR.insertRow(-1);
 
         // Creates and adds the level need to learn the move.
         const learnLevel = 
@@ -109,8 +119,9 @@ function displayMovesL (pokemon){
         var newText = document.createTextNode(pokemonHTMLstring1);
         moveCell3.appendChild(newText);
         }
+        //Display moves not learned by level
         else{
-            var newRow = tbodyRefTM.insertRow(-1);
+            var newRow = movesTableRTM.insertRow(-1);
 
         // Creates and adds the level need to learn the move.
         const learnLevel = 
@@ -143,14 +154,16 @@ function displayMovesL (pokemon){
 
 }
 
+//displays moves of pokemon that is on the right side
 function displayMovesR (pokemon){
-    tbodyRefR.innerHTML = `<tr>
+        //starts by resesting current moves for incase pokemon is currently selected
+    movesTableRR.innerHTML = `<tr>
                                 <th>LV</th>
                                 <th>Move</th>
                                 <th>Method Learned</th>
                          </tr>` 
 
-    tbodyRefTMR.innerHTML = `<tr>
+    movesTableRTMR.innerHTML = `<tr>
                          <th>LV</th>
                          <th>Move</th>
                          <th>Method Learned</th>
@@ -160,7 +173,7 @@ function displayMovesR (pokemon){
 
         if(pokemon.moves[i].version_group_details[pokemon.moves[i].version_group_details.length - 1].move_learn_method.name == "level-up") {
             // Creates a new row
-        var newRow = tbodyRefR.insertRow(-1);
+        var newRow = movesTableRR.insertRow(-1);
 
         // Creates and adds the level need to learn the move.
         const learnLevel = 
@@ -189,7 +202,7 @@ function displayMovesR (pokemon){
         moveCell3.appendChild(newText);
         }
         else{
-            var newRow = tbodyRefTMR.insertRow(-1);
+            var newRow = movesTableRTMR.insertRow(-1);
 
         // Creates and adds the level need to learn the move.
         const learnLevel = 
@@ -224,17 +237,22 @@ function displayMovesR (pokemon){
 
 
 function displayDropdownL(){
-    searchBarL.value = "";
+    //starts by reseting list so it doesnt stack if clicked on multiple times
     listL.innerHTML = " ";
+    //foreach pokemon in "pokemon" create a new list element with name of 
+    //pokemon and onclick function
     pokemon.forEach(function (value , i) {
         let newNode = document.createElement("li");
         const textNode = document.createTextNode(pokemon[i].name);
         newNode.appendChild(textNode);
+        //Function used to fill table of moves, base stats, and pokemon image
         newNode.onclick = function () {
             displayMovesL(pokemon[i]);
             displayPokemonL(pokemon[i]);
             diaplayStatsL(pokemon[i]);
+            //hide list once pokemon selected
             listL.innerHTML = " ";
+            //hide list element when selecting pokemon
             listL.style.display = "none";
         }
         listL.style.display = "block";
@@ -243,7 +261,6 @@ function displayDropdownL(){
 }
 
 function displayDropdownR(){
-    searchBarR.value = "";
     listR.innerHTML = " ";
     pokemon.forEach(function (value , i) {
         let newNode = document.createElement("li");
@@ -261,6 +278,8 @@ function displayDropdownR(){
     });
 }
 
+//diplay using with an array of pokemon as a parameter to show a 
+//filtered dropdown list
 function displayDropdownL1(pokemon){
     listL.innerHTML = " ";
     pokemon.forEach(function (value , i) {
@@ -280,6 +299,8 @@ function displayDropdownL1(pokemon){
     });
 }
 
+//diplay using with an array of pokemon as a parameter to show a 
+//filtered dropdown list
 function displayDropdownR1(pokemon){
     listR.innerHTML = " ";
     pokemon.forEach(function (value , i) {
@@ -299,6 +320,7 @@ function displayDropdownR1(pokemon){
     });
 }
 
+//Function to display image, id, name, and type once pokemone is selected
 function displayPokemonL(pokemon) {
     displayL.style.display = "block";
     const pokemonHTMLstring = 
@@ -312,6 +334,7 @@ function displayPokemonL(pokemon) {
     displayL.innerHTML = pokemonHTMLstring;
 }
 
+//Function to display image, id, name, and type once pokemone is selected
 function displayPokemonR(pokemon) {
     displayR.style.display = "block";
     const pokemonHTMLstring = 
@@ -325,6 +348,7 @@ function displayPokemonR(pokemon) {
     displayR.innerHTML = pokemonHTMLstring;
 }
 
+//Creates pregress bar using base stats of each pokemon
 function diaplayStatsL(pokemon) {
     statContainerL.innerHTML = " ";
     pokemon.stats.forEach(function (value , i) {
@@ -356,12 +380,3 @@ function diaplayStatsR(pokemon) {
     statContainerR.innerHTML += statsHtml;
     }) 
 }
-
-/*
-<div id="progress_container_text">
-{ <div id="progress_container_text_align_center">126</div>
-</div>
-<div id="progress_container_text">
-    <div id="progress_max_container_text_align_center">250</div>
-</div>
-<div id="loading_bar"></div>} */
