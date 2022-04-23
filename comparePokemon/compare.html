@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,162 +9,125 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
     <title>Brogrammer's Pokedex</title>
 </head>
+
 <body>
     <!--Top Task Bar-->>
     <div class="taskBar">
         <div id="homePage">
             <!--Button that goes to the "Home" page-->
-            <a href="../home/home.html"><img src="pokeball.png" alt="Pokeball"></a> 
+            <a href="../home/home.html"><img src="pokeball.png" alt="Pokeball"></a>
         </div>
 
         <div id="mainPage">
             <!--Button that goes to the "Main" page-->
-            <a id="mainPageAnchor" href="../index/index.html"> <h2>Main</h2> </a>
+            <a id="mainPageAnchor" href="../index/index.html">
+                <h2>Main</h2>
+            </a>
         </div>
 
         <div id="News">
             <!--Button that goes to the "News" page-->
-            <a id="newsAnchor" href="../news/news.html"><h2>News</h2></a>            
+            <a id="newsAnchor" href="../news/news.html">
+                <h2>News</h2>
+            </a>
         </div>
 
         <div id="comparePokemon">
             <!--Button that goes to the "Compare Pokemon" page-->
-            <a id="comparePokemonAnchor" href="../comparePokemon/compare.html"> <h2>Compare Pokemon</h2> </a>            
+            <a id="comparePokemonAnchor" href="../comparePokemon/compare.html">
+                <h2>Compare Pokemon</h2>
+            </a>
         </div>
 
         <div id="gameMechanics">
             <!--Button that goes to the "Game Mechanics" page-->
-            <a id="gameMechanicsAnchor" href="../gameMechanics/gameMechanics.html"> <h2>Game Mechanics</h2> </a>            
+            <a id="gameMechanicsAnchor" href="../gameMechanics/gameMechanics.html">
+                <h2>Game Mechanics</h2>
+            </a>
         </div>
 
         <div id="aboutUs">
             <!--Button that goes to the "About Us" page-->
-            <a id="aboutUsAnchor" href= "../aboutUs/aboutUs.html"> <h2>About Us</h2> </a>
+            <a id="aboutUsAnchor" href="../aboutUs/aboutUs.html">
+                <h2>About Us</h2>
+            </a>
         </div>
     </div>
+
+    <!--Compare -->
     <div class="comparePokemon">
+
+        <!-- Pokemon on left side of screen -->
         <div class="pokemonCard1">
             <h2>Pokemon Number 1</h2>
             <a id="searchWrapper1">
-                <input type="text" name="searchBar" id="searchBar" placeholder="Search for a Pokemon" />
+                <input onclick="displayDropdownL()" type="text" name="searchBarL" id="searchBarL" placeholder="Search for a Pokemon" />
             </a>
+            <ul id="myListL" style="display: none;">
+            </ul>
+            <ul id="displayL" style="display: none;">
+            </ul>
             <h3>Base Stats</h3>
+            <div id="base_Stat_ContainerL" style="display: block;">
+            </div>
             <h3>Moves Learnt by level up</h3>
-            <table class="movesLevel1">
+            <table id="movesTableL">
                 <tr>
-                  <th>Lv.</th>
-                  <th>Move</th>
-                  <th>Type</th>
-                  <th>Cat.</th>
-                  <th>Power</th>
-                  <th>Acc.</th>
+                    <th>LV</th>
+                    <th>Move</th>
+                    <th>Method Learned</th>
                 </tr>
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-              </table> 
+            </table> 
             <h3>Moves Learnt by TM</h3>
-            <table class="movesTM1">
+            <table id="movesTML">
                 <tr>
-                  <th>TM</th>
-                  <th>Move</th>
-                  <th>Type</th>
-                  <th>Cat.</th>
-                  <th>Power</th>
-                  <th>Acc.</th>
+                    <th>LV</th>
+                    <th>Move</th>
+                    <th>Method Learned</th>
+
                 </tr>
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-              </table> 
+            <ul id="pokedexMoves"></ul>
+            </table> 
         </div>
+
+        <!-- Pokemon on right side of screen -->
         <div class="pokemonCard2">
             <h2>Pokemon Number 2</h2>
-            <a id="searchWrapper1">
-                <input type="text" name="searchBar" id="searchBar" placeholder="Search for a Pokemon" />
+            <a id="searchWrapper2">
+                <input type="text" onclick="displayDropdownR()" name="searchBarR" id="searchBarR" placeholder="Search for a Pokemon" />
             </a>
+            <ul id="myListR" style="display: none;">
+            </ul>
+            <ul id="displayR" style="display: none;">
+            </ul>
             <h3>Base Stats</h3>
+            <div id="base_Stat_ContainerR" style="display: block;">
+            </div>
             <h3>Moves Learnt by level up</h3>
-            <table class="movesLevel2">
+            <table id="movesTableR">
                 <tr>
-                  <th>Lv.</th>
-                  <th>Move</th>
-                  <th>Type</th>
-                  <th>Cat.</th>
-                  <th>Power</th>
-                  <th>Acc.</th>
+                    <th>LV</th>
+                    <th>Move</th>
+                    <th>Method Learned</th>
+
                 </tr>
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-              </table> 
+            </table> 
             <h3>Moves Learnt by TM</h3>
-            <table class="movesTM2">
+            <table id="movesTMR">
                 <tr>
-                  <th>TM</th>
-                  <th>Move</th>
-                  <th>Type</th>
-                  <th>Cat.</th>
-                  <th>Power</th>
-                  <th>Acc.</th>
+                    <th>LV</th>
+                    <th>Move</th>
+                    <th>Method Learned</th>
+
                 </tr>
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-              </table> 
+            </table> 
         </div>
     </div>
+
+
+
+    <script src="compare.js"></script>
+
 </body>
+
 </html>
