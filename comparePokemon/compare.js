@@ -20,7 +20,7 @@ let pokemon = [];
 //load pokemon into array "pokemon" using count in for loop. Max 898
 const loadComparePokemon = () => {
     const promises = [];
-    for (let i = 1; i <= 150; i++) {
+    for (let i = 1; i <= 898; i++) {
         const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
         promises.push(fetch(url).then((res) => res.json()));
     }
