@@ -141,3 +141,102 @@ body{
     width: 299px;
     height: 168px;
 }
+
+.teamPokemon{
+    background-color: lightsteelblue;
+    position:absolute;
+    Width: 75%;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    color: black;
+    font-family: Rubik;
+    text-align: center;
+    left: 12.5%;
+}
+
+#pokemon1{
+    display: flex;
+    height: 250px;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+#pokemon2{
+    display: flex;
+    height: 250px;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+#pokemon3{
+    display: flex;
+    height: 250px;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+#pokemon4{
+    display: flex;
+    height: 250px;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+#pokemon5{
+    display: flex;
+    height: 250px;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+#pokemon6{
+    display: flex;
+    height: 250px;
+    flex-direction: row;
+    margin-bottom: 15px;
+    
+}
+.card-image {
+    height: 250px; 
+}
+.card{
+    list-style: none;
+}
+
+.movesList{
+    background-color: white;
+    width: 50%;
+    height: 250px;
+    margin: auto;
+    display:flex;
+    border-radius: 20px;
+    flex-direction: column;
+}
+
+#move1 {
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-top: 15px;
+}
+#move2 {
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+}
+#move3 {
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+}
+#move4 {
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+}
+
