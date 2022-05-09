@@ -211,32 +211,307 @@ body{
 }
 
 #move1 {
+    display: flex;
     border:black 2px solid;
     height: 50px;
     width: 90%;
     border-radius: 10px;
     margin-left: 5%;
     margin-top: 15px;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #f4f4f4;
+}
+#move5 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-top: 15px;
+    flex-direction: row;
+    justify-content: center;
+}
+#move9 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-top: 15px;
+    flex-direction: row;
+    justify-content: center;
+}
+#move13 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-top: 15px;
+    flex-direction: row;
+    justify-content: center;
+}
+#move17 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-top: 15px;
+    flex-direction: row;
+    justify-content: center;
+}
+#move21 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-top: 15px;
+    flex-direction: row;
+    justify-content: center;
 }
 #move2 {
+    display: flex;
     border:black 2px solid;
     height: 50px;
     width: 90%;
     border-radius: 10px;
     margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
+}
+#move6 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
+}
+#move10 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
+}
+#move14 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
+}
+#move18 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
+}
+#move22 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
 }
 #move3 {
+    display: flex;
     border:black 2px solid;
     height: 50px;
     width: 90%;
     border-radius: 10px;
     margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
+}
+#move7 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
+}
+#move11 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
+}
+#move15 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
+}
+#move19 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
+}
+#move23 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
 }
 #move4 {
+    display: flex;
     border:black 2px solid;
     height: 50px;
     width: 90%;
     border-radius: 10px;
     margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
 }
 
+#move8 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#move12 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#move16 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
+}
+#move20 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
+}
+#move24 {
+    display: flex;
+    border:black 2px solid;
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#listWrapper {
+    overflow: auto;
+    position: fixed;
+    top: 20%;
+    left: 45%;
+    height: 250px;
+    width: 400px;
+    background: #f4f4f4;
+    opacity: .95;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    z-index: 99;
+    border: black;
+    display: block;
+}
+
+#listWrapper1 {
+    overflow: auto;
+    position: fixed;
+    top: 20%;
+    left: 45%;
+    height: 100px;
+    width: 400px;
+    background: #f4f4f4;
+    opacity: .95;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    z-index: 99;
+    border: black;
+    display: block;
+}
+
+#pokemonList {
+    margin-top: auto;
+    justify-content: center;
+    align-items: center;
+} 
+
+#listWrapper ul {
+    list-style: none;
+}
+
+#listWrapper li {
+    color: black;
+}
+#listWrapper1 ul {
+    list-style: none;
+}
+
+#listWrapper1 li {
+    color: black;
+}
