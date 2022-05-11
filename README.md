@@ -9,3 +9,5 @@ Features:
 -Search bar (not case sensitive)
 -homepage
 -Page to compare the stats of 2 Pokemon
+-Team Builder Page, a page where you can add Pokemon to a team and check their potenial moves and synergy
+-Gym Leader Guide, a page where you can see gym leader's pokemon and plan out your battle against them (Only Red and Blue Gym Leaders)
