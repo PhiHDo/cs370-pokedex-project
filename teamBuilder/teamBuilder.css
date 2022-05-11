@@ -224,6 +224,8 @@ body{
     display:flex;
     border-radius: 20px;
     flex-direction: column;
+
+
 }
 
 #move1 {
@@ -235,8 +237,7 @@ body{
     margin-left: 5%;
     margin-top: 15px;
     flex-direction: row;
-    justify-content: center;
-    background-color: #f4f4f4;
+    justify-content: space-between;
 }
 #move5 {
     display: flex;
@@ -247,7 +248,7 @@ body{
     margin-left: 5%;
     margin-top: 15px;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move9 {
     display: flex;
@@ -258,7 +259,7 @@ body{
     margin-left: 5%;
     margin-top: 15px;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move13 {
     display: flex;
@@ -269,7 +270,7 @@ body{
     margin-left: 5%;
     margin-top: 15px;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move17 {
     display: flex;
@@ -280,7 +281,7 @@ body{
     margin-left: 5%;
     margin-top: 15px;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move21 {
     display: flex;
@@ -291,7 +292,7 @@ body{
     margin-left: 5%;
     margin-top: 15px;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move2 {
     display: flex;
@@ -301,7 +302,7 @@ body{
     border-radius: 10px;
     margin-left: 5%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move6 {
     display: flex;
@@ -311,7 +312,7 @@ body{
     border-radius: 10px;
     margin-left: 5%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move10 {
     display: flex;
@@ -321,7 +322,7 @@ body{
     border-radius: 10px;
     margin-left: 5%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move14 {
     display: flex;
@@ -331,7 +332,7 @@ body{
     border-radius: 10px;
     margin-left: 5%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move18 {
     display: flex;
@@ -341,7 +342,7 @@ body{
     border-radius: 10px;
     margin-left: 5%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move22 {
     display: flex;
@@ -351,7 +352,7 @@ body{
     border-radius: 10px;
     margin-left: 5%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move3 {
     display: flex;
@@ -361,7 +362,7 @@ body{
     border-radius: 10px;
     margin-left: 5%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move7 {
     display: flex;
@@ -371,7 +372,7 @@ body{
     border-radius: 10px;
     margin-left: 5%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move11 {
     display: flex;
@@ -381,7 +382,7 @@ body{
     border-radius: 10px;
     margin-left: 5%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move15 {
     display: flex;
@@ -391,7 +392,7 @@ body{
     border-radius: 10px;
     margin-left: 5%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move19 {
     display: flex;
@@ -401,7 +402,7 @@ body{
     border-radius: 10px;
     margin-left: 5%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move23 {
     display: flex;
@@ -411,7 +412,7 @@ body{
     border-radius: 10px;
     margin-left: 5%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move4 {
     display: flex;
@@ -421,7 +422,7 @@ body{
     border-radius: 10px;
     margin-left: 5%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 #move8 {
@@ -432,7 +433,7 @@ body{
     border-radius: 10px;
     margin-left: 5%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 #move12 {
@@ -443,7 +444,7 @@ body{
     border-radius: 10px;
     margin-left: 5%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 #move16 {
@@ -454,7 +455,7 @@ body{
     border-radius: 10px;
     margin-left: 5%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move20 {
     display: flex;
@@ -464,7 +465,7 @@ body{
     border-radius: 10px;
     margin-left: 5%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 #move24 {
     display: flex;
@@ -474,21 +475,19 @@ body{
     border-radius: 10px;
     margin-left: 5%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 #listWrapper {
     overflow: auto;
     position: fixed;
-    top: 20%;
-    left: 45%;
-    height: 250px;
-    width: 400px;
+    top: 17%;
+    right: 15px;
+    height: 60%;
+    width: 22%;
     background: #f4f4f4;
     opacity: .95;
-    display: flex;
     justify-content: center;
-    align-items: top;
     z-index: 99;
     border: black;
     display: block;
@@ -497,15 +496,13 @@ body{
 #listWrapper1 {
     overflow: auto;
     position: fixed;
-    top: 20%;
-    left: 45%;
-    height: 100px;
-    width: 400px;
+    top: 17%;
+    right: 15px;
+    height: 60%;
+    width: 22%;
     background: #f4f4f4;
     opacity: .95;
-    display: flex;
     justify-content: center;
-    align-items: top;
     z-index: 99;
     border: black;
     display: block;
@@ -513,9 +510,19 @@ body{
 
 #pokemonList {
     margin-top: auto;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
+    text-transform: capitalize;
+    border: 1px solid black;
 } 
+
+#pokemonList li{
+    color: black;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: 1px solid black;
+    white-space: pre-line;
+}
 
 #listWrapper ul {
     list-style: none;
@@ -530,4 +537,31 @@ body{
 
 #listWrapper1 li {
     color: black;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: 1px solid black;
 }
+
+
+/*******/
+#moveName{
+    font-weight: bold;
+    padding-left: 20px ;
+    position: relative;
+    text-align:left;
+    text-transform: capitalize;
+}
+
+#moveStats{
+    font-weight: bold;
+    padding-right: 20px ;
+}
+
+#moveList:hover {
+    cursor: pointer;
+}
+
+#teamList:hover {
+    cursor: pointer;
+}
+

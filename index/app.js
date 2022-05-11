@@ -13,6 +13,7 @@ const g5 = document.getElementById('g5');
 const g6 = document.getElementById('g6');
 const g7 = document.getElementById('g7');
 const g8 = document.getElementById('g8');
+const sidebar = document.getElementById('sidebar');
 elements = document.querySelectorAll('input[name="sortType"]');
 //array for each genereation of pokemon.
 let empty = [];
@@ -164,8 +165,7 @@ const loadPokemon = () => {
             weight: result.weight,
             height: result.height,
             moves: result.moves.map((move) => move.move.name).join(', '),
-            stats: result.stats.map((stat) => stat.stat.name).join(', '),
-            statValue: result.stats.map((stats) => stats.base_stat).join(', '),
+            stats: result.stats,
         }));
         gen1 = pokemon.filter((currentPokemon) => {
             return ( 
@@ -246,31 +246,43 @@ const selectPokemon = (id) => {
 
 //pop up window
 const displayWindow = (pokeman) => {
-    const HTMLstring =`
+    var HTMLstring =`
         <div class = "popup">
             <button id="closeButton"  onclick="closePopup()
             ">Close</button>
             <div class="card1">
-                <img class="card-image" src='${pokeman.image}'/>
+                <img class="card1-image" src='${pokeman.image}'/>
                 <h2 class="card=title">${pokeman.id}. ${pokeman.name}
                 </h2>
-                <p><small>Height: </small>${pokeman.height}'
+                <p><small>Height: </small>${pokeman.height}"
                 | <small>Weight: </small>${pokeman.weight}lbs 
                 | <small>Type: </small>${pokeman.type}
                 </p>
                 
                 <h2>Base Stats</h2>
-                <p>${pokeman.stats}</p>
-                <p>${pokeman.statValue}</p>
-
-                <h2>Move Pool</h2>
-                <p>${pokeman.moves}</p>
+                `
+                pokeman.stats.forEach(function (value , i) {
+                    console.log(i);
+                    const statsHtml = `
+                    <div id="progress_container" style="display: block;">
+                    <div id="progress_container_text">
+                     <div id="progress_container_text_align_center">${pokeman.stats[i].stat.name}: ${pokeman.stats[i].base_stat}</div>
+                    </div>
+                    <div id="loading_bar${i}" style="width:${pokeman.stats[i].base_stat}%;"></div>
+                    </div>
+                    `
+                HTMLstring += statsHtml;
+                }) 
+                
+                HTMLstring +=`
+                <div id = pokemonMoves>
+                    <h2>Move Pool</h2>
+                    <p>${pokeman.moves}</p>
+                </div>
             </div>
         </div>
         `
-    //displayPokemon(pokemon);    
     pokedex.innerHTML = HTMLstring + pokedex.innerHTML;
-    //console.log(pokeman);
 };
 
 //close the pop up window

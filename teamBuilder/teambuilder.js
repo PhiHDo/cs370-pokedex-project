@@ -133,12 +133,8 @@ function typeToColor(type){
     else return 'white';
 }
 
-function selectPokemon(id){
-    
-}
-
 const fetchPokemon = async () => {
-    const url = 'https://pokeapi.co/api/v2/pokemon?limit=150';
+    const url = 'https://pokeapi.co/api/v2/pokemon?limit=898';
     const res = await fetch(url);
     const data = await res.json();
     pokemon = data.results.map((result , index) => 
@@ -163,6 +159,7 @@ const displayPokemonList = (pokemon , e) => {
     pokemonList.id = 'pokemonList';
     pokemon.forEach(function (value , i) {
         let newNode = document.createElement("li");
+        newNode.id = 'teamList'
         const textNode = document.createTextNode(pokemon[i].name);
         newNode.appendChild(textNode);
         newNode.onclick = function () {
@@ -287,7 +284,9 @@ function displayMovesList(pokeman , e) {
     pokemonList.id = 'pokemonList';
     moveSet.forEach(function (value , i) {
         let newNode = document.createElement("li");
-        const textNode = document.createTextNode(moveSet[i].name);
+        newNode.id = 'moveList';
+        const tempText = moveSet[i].name +' - - - - >' + ' Power:' + moveSet[i].power + '  Acc:' + moveSet[i].acc + '  PP:' + moveSet[i].pp;
+        const textNode = document.createTextNode(tempText);
         newNode.appendChild(textNode);
         newNode.onclick = function () {
             displayMove(moveSet[i] , e);
@@ -304,18 +303,15 @@ function displayMovesList(pokeman , e) {
 function displayMove(move , e) {
     console.log(e);
     const moveHTML = `
-    <div id = "moveName">
+    <p id = "moveName">
      ${move.name}
-    </div>
-    <div id = "movePwr">
+    </p>
+    <p id = "moveStats">
      PW:${move.power}
-    </div>
-    <div id = "moveAcc">
-     Acc:${move.acc}
-    </div>
-    <div id = "movePP">
+     Acc:${move.acc}%
      PP: ${move.pp}
-    </div>
+     </p>
+    
     `
     e.innerHTML = moveHTML;
     e.style.backgroundColor = move.backgroundColor;
